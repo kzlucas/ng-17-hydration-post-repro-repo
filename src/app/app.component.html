@@ -1,0 +1,11 @@
+<div *ngIf="getReq$ | async as resp">
+    <b>get request response</b>
+    {{resp | json}}
+</div>
+
+<hr>
+
+<div *ngIf="postReq$ | async as resp">
+    <b>post request response</b>
+    {{resp | json}}
+</div>
