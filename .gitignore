@@ -43,5 +43,4 @@ testem.log
 .DS_Store
 Thumbs.db
 
-# Env files
-.env
+.package-lock.json

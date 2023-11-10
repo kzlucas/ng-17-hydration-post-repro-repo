@@ -25,35 +25,15 @@ export class AppComponent {
   }
 
   get(): Observable<HttpResponse<any>> {
-    try {
-      return this.http.get<any>(
-        'https://dummyjson.com/products/1'
-        , {})
-        .pipe(map((res: HttpResponse<any>) => {
-          console.log(res);
-          return res
-        }));
-    }
-    catch (error) {
-      console.log(error);
-      throw (error)
-    }
+    return this.http.get<any>(
+      'https://dummyjson.com/products/1'
+      , {});
   }
 
   post(): Observable<HttpResponse<any>> {
-    try {
-      return this.http.post<any>(
-        'https://dummyjson.com/products/add'
-        , {})
-        .pipe(map((res: HttpResponse<any>) => {
-          console.log(res);
-          return res;
-        }));
-    }
-    catch (error) {
-      console.log(error);
-      throw (error)
-    }
+    return this.http.post<any>(
+      'https://dummyjson.com/products/add'
+      , {})
   }
 
 }
